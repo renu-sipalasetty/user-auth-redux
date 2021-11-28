@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {Route,Link} from 'react-router-dom'
+import {Route,Link,withRouter} from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import Home from './Home'
 import Register from './Register'
@@ -60,7 +60,7 @@ const NavBar=(props)=>{
                                     className='mx-5 nav-item nav-link text-primary'
                                 >My Notes</Link>
                                 <Link 
-                                    to="/logout" 
+                                    to="#" 
                                     onClick={handleLogout}
                                     className='mx-5 nav-item nav-link text-primary'
                                 >Logout</Link>
@@ -96,4 +96,5 @@ const NavBar=(props)=>{
     )
 }
 
-export default NavBar
+
+export default withRouter(NavBar)
