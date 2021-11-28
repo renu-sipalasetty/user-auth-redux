@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {Input,Form,FormGroup,Button,ButtonGroup} from 'reactstrap'
 import validator from 'validator'
 import { useDispatch } from 'react-redux'
 import TextTag from '../HtmlComponents/TextTags'
@@ -131,6 +130,7 @@ const Register=(props)=>{
                     <input 
                         type='submit'
                         value='Register'
+                        onSubmit={handleSubmit}
                         className='btn btn-success mt-3'
                     />
                 </div>
